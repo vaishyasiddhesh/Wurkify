@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/akhil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>wurkify | Help & Support</title>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="sidebar">
+        <div class="brand">
+          <i class="fa-solid fa-xmark xmark"></i>
+          <h3>Help & Support</h3>
+        </div>
+        <ul>
+          <li class="home1">
+            <a href="../index.html" class="sidebar-link">
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Profile.html" class="sidebar-link">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Activites.html" class="sidebar-link">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Activities</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Latest-event.html" class="sidebar-link">
+              <i class="fa-solid fa-calendar-days"></i><span>Latest event</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Application.html" class="sidebar-link">
+              <i class="fa-solid fa-diagram-project fa-fw"></i
+              ><span>Application</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./payment.html" class="sidebar-link">
+              <i class="fa-regular fa-money-bill-1"></i>
+              <span>Payment</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./settings.html" class="sidebar-link">
+              <i class="fa-solid fa-gear fa-fw"></i
+              ><span>Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./message.html" class="sidebar-link">
+              <i class="fa-solid fa-message"></i> <span>messages</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./help.html" class="sidebar-link">
+              <i class="fa-solid fa-handshake-angle"></i><span>Help & Support</span>
+            </a>
+          </li>
+          <button id="submit1">LogOut</button>
+          </ul>            
+         </div>
+          <main>
+            <div class="header">
+              <i class="fa-solid fa-bars bar-item"></i>
+              <div class="search">
+                  <input type="search" placeholder="Type A Keyword">
+              </div>
+              <div class="profile">
+                  <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
+                  <a href="Profile.html"><img src="../images/avatar.png" alt="No Image"/></a>
+              </div>
+            </div> 
+          
+              <div class="main-content">
+                <div class="title">
+                  <h1>Help & Support</h1>
+              </div>
+                <div class="help-support">
+                  
+                
+                  <!-- FAQ Section -->
+                  <div class="faq-section">
+                    <div class="faq-item">
+                      <button class="faq-question">How can I reset my password?</button>
+                      <div class="faq-answer">
+                        <p>To reset your password, go to the login page, click on "Forgot Password," and follow the instructions. An email will be sent to you with a link to reset your password.</p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <button class="faq-question">How do I update my profile information?</button>
+                      <div class="faq-answer">
+                        <p>Navigate to your account settings by clicking on your profile icon at the top right corner. From there, you can update your personal information, including your email, phone number, and profile picture.</p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <button class="faq-question">What should I do if I encounter a bug?</button>
+                      <div class="faq-answer">
+                        <p>If you encounter a bug, please report it using the form below or by contacting our support team directly. Include as much detail as possible to help us resolve the issue quickly.</p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <button class="faq-question">How can I delete my account?</button>
+                      <div class="faq-answer">
+                        <p>To delete your account, please contact our support team using the form below. Keep in mind that deleting your account is permanent and cannot be undone.</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Contact Form -->
+                  <div class="contact-form">
+                    <h3>Still need help?</h3>
+                    <p>If you didn't find the answers you were looking for, fill out the form below. Our support team will get back to you as soon as possible.</p>
+                    <form id="support-form">
+                      <label for="name">Name <span class="required">*</span></label>
+                      <input type="text" id="name" name="name" required placeholder="Enter your name">
+                
+                      <label for="email">Email <span class="required">*</span></label>
+                      <input type="email" id="email" name="email" required placeholder="Enter your email">
+                
+                      <label for="issue">Issue <span class="required">*</span></label>
+                      <textarea id="issue" name="issue" rows="5" required placeholder="Describe your issue"></textarea>
+                
+                      <label for="priority">Priority</label>
+                      <select id="priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                      </select>
+                
+                      <button type="submit">Submit</button>
+                    </form>
+                  </div>
+                
+                  <!-- Confirmation Message -->
+                  <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                    <h4>Thank you for contacting us!</h4>
+                    <p>Your message has been sent successfully. Our support team will reach out to you shortly.</p>
+                  </div>
+                </div>
+                
+                </div>
+          </main>
+          
+          
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="../js/event.js"></script>
+  </body>
+</html>

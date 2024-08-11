@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/all.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/event-posting.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>wurkify | organiser-Profile</title>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="sidebar">
+        <div class="brand">
+          <i class="fa-solid fa-xmark xmark"></i>
+          <h3>Profile</h3>
+        </div>
+        <ul>
+          <li>
+            <a href="../index.html" class="sidebar-link">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Profile.html" class="sidebar-link">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Activites.html" class="sidebar-link">
+              <i class="fa-regular fa-user fa-fw"></i><span>activities</span>
+            </a>
+          </li>
+          <li>
+            <a href="./eventposting.html" class="sidebar-link">
+              <i class="fa-solid fa-calendar fa-fw"></i>
+              <span>Event Posting</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./applicants.html" class="sidebar-link">
+              <i class="fa-regular fa-circle-user fa-fw"></i
+              ><span>Applicants</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="./payment.html" class="sidebar-link">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Payments</span>
+            </a>
+          </li>
+
+         
+          <li>
+            <a href="./message.html" class="sidebar-link">
+              <i class="fa-regular fa-message fa-fw"></i><span>Messages</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./review.html" class="sidebar-link">
+              <i class="fa-solid fa-comment-dots"></i><span>Review</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./help.html" class="sidebar-link">
+              <i class="fa-solid fa-phone"></i>
+              <span>Help&Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./settings.html" class="sidebar-link">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <button id="submit1">LogOut</button>
+        </ul>
+      </div>
+      <main>
+        <div class="header">
+          <i class="fa-solid fa-bars bar-item"></i>
+          <div class="search">
+            <input type="search" placeholder="Type A Keyword" />
+          </div>
+
+          <div class="profile">
+            <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
+
+            <img src="/images/avatar.png" alt="No Image" />
+          </div>
+        </div>
+        <div class="main-content">
+            
+          <div class="title">
+            <h1>Add Event</h1>
+          </div>
+          <div class="container">
+           
+            <form id="eventForm">
+                <div class="column">
+                    <label for="eventName">Event Name:</label>
+                    <input type="text" id="eventName" name="eventName" required>
+        
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+        
+                    <label for="eventTime">Event Time:</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+        
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+        
+                    <label for="payment">Payment Information:</label>
+                    <input type="text" id="payment" name="payment" required>
+        
+                    <label for="dresscode">Dress Code:</label>
+                    <input type="text" id="dresscode" name="dresscode">
+                </div>
+        
+                <div class="column">
+                    <label for="portalRequirements">Portal Requirements:</label>
+                    <textarea id="portalRequirements" name="portalRequirements"></textarea>
+        
+                    <fieldset>
+                      <legend>Food Preference:</legend>
+                      <div class="radio-group">
+                          <label for="foodYes">
+                              <input type="radio" name="food" value="yes" id="foodYes">
+                              Yes
+                          </label>
+                          <label for="foodNo">
+                              <input type="radio" name="food" value="no" id="foodNo">
+                              No
+                          </label>
+                      </div>
+                  </fieldset>
+                  
+        
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+           
+        </div>
+        
+         
+          </div>
+        
+      </main>
+    </div>
+    <script src="/javascript
+    /event.js"></script>
+  </body>
+</html>

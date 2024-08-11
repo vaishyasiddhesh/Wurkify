@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/all.min.css" />
-    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <link rel="stylesheet" href="/stylesheets/seekerdashboard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
@@ -22,60 +22,73 @@
       <div class="sidebar">
         <div class="brand">
           <i class="fa-solid fa-xmark xmark"></i>
-          <h3 class="brand-name"><%= seeker.Fullname %></h3>
+          <h3 class="brand-name">Seeker</h3>
         </div>
         <ul>
-          <li>
+          <li class="home1">
             <a href="index.html" class="sidebar-link">
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="./pages/settings.html" class="sidebar-link">
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span>Settings</span>
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
             </a>
           </li>
 
           <li>
             <a href="./pages/Profile.html" class="sidebar-link">
-              <i class="fa-regular fa-user fa-fw"></i><span>Profile</span>
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
             </a>
           </li>
 
           <li>
-            <a href="./pages/Projects.html" class="sidebar-link">
+            <a href="./pages/Activites.html" class="sidebar-link">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Activities</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./pages/Latest-event.html" class="sidebar-link">
+              <i class="fa-solid fa-calendar-days"></i><span>Latest event</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./pages/Application.html" class="sidebar-link">
               <i class="fa-solid fa-diagram-project fa-fw"></i
-              ><span>Projects</span>
+              ><span>Application</span>
             </a>
           </li>
 
           <li>
-            <a href="./pages/Courses.html" class="sidebar-link">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i
-              ><span>Courses</span>
+            <a href="./pages/payment.html" class="sidebar-link">
+              <i class="fa-regular fa-money-bill-1"></i>
+              <span>Payment</span>
             </a>
           </li>
 
           <li>
-            <a href="./pages/Friends.html" class="sidebar-link">
-              <i class="fa-regular fa-circle-user fa-fw"></i
-              ><span>Friends</span>
+            <a href="./pages/settings.html" class="sidebar-link">
+              <i class="fa-solid fa-gear fa-fw"></i
+              ><span>Settings</span>
             </a>
           </li>
 
           <li>
-            <a href="./pages/Files.html" class="sidebar-link">
-              <i class="fa-regular fa-file fa-fw"></i> <span>Files</span>
+            <a href="./pages/message.html" class="sidebar-link">
+              <i class="fa-solid fa-message"></i> <span>messages</span>
             </a>
           </li>
 
           <li>
-            <a href="./pages/Plans.html" class="sidebar-link">
-              <i class="fa-regular fa-credit-card fa-fw"></i><span>Plans</span>
+            <a href="./pages/help.html" class="sidebar-link">
+              <i class="fa-solid fa-handshake-angle"></i><span>Help & Support</span>
             </a>
+          </li>
+          <li>
+           
+            <button class="wurkify-custom-button">LogOut</button>
+
+          
           </li>
         </ul>
       </div>
@@ -101,7 +114,7 @@
               <div class="box-section1">
                 <div class="box-title">
                   <h2>Welcome</h2>
-                  <p><%= seeker.Fullname %></p>
+                  <p>Zana</p>
                 </div>
                 <div class="box-image">
                   <img src="/images/welcome.png" alt="No image" />
@@ -130,21 +143,7 @@
             <div class="box">
               <div class="box-section1">
                 <div class="box-title">
-                  <h2>Quick Draft</h2>
-                  <p>Write A Draft For Your Ideas</p>
-                </div>
-              </div>
-              <form>
-                <input type="text" placeholder="Title" />
-                <textarea placeholder="Your Thoughts"></textarea>
-                <button type="submit">save</button>
-              </form>
-            </div>
-
-            <div class="box">
-              <div class="box-section1">
-                <div class="box-title">
-                  <h2>Yearly Targets</h2>
+                  <h2>Your Progress</h2>
                   <p>Targets Of The Year</p>
                 </div>
               </div>
@@ -170,7 +169,7 @@
                   </div>
                   <div class="third-box-info">
                     <ul>
-                      <li>Projects</li>
+                      <li>No. of Events</li>
                       <li>24</li>
                       <li>
                         <span><span class="tipTop">55%</span></span>
@@ -185,7 +184,7 @@
                   </div>
                   <div class="third-box-info">
                     <ul>
-                      <li>Team</li>
+                      <li>Rating</li>
                       <li>12</li>
                       <li>
                         <span><span class="tipTop">75%</span></span>
@@ -199,16 +198,20 @@
             <div class="box">
               <div class="box-section1">
                 <div class="box-title">
-                  <h2>Tickets Statistics</h2>
-                  <p>Everything About Support Tickets</p>
+                  <h2>Latest Events</h2>
+                  <p>Everything About Your Latest</p>
                 </div>
               </div>
               <div class="fourth-box-section2">
-                <div class="small-box">
-                  <i class="fa-regular fa-rectangle-list fa-2x mb-10"></i>
-                  <span>2500</span>
-                  <p>Total</p>
-                </div>
+                <div class="event-card">
+                  <div class="event-content">
+                    <span>Mumbai Festival (MAMI)</span>
+                      <p>20</p>
+                      <div class="event-status">
+                          <!-- Event status like Pending, Closed, Deleted -->
+                      </div>
+                  </div>
+              </div>
 
                 <div class="small-box">
                   <i class="fa-solid fa-spinner fa-2x mb-10"></i>
@@ -233,219 +236,17 @@
             <div class="box">
               <div class="box-section1">
                 <div class="box-title">
-                  <h2>Latest News</h2>
-                </div>
-              </div>
-              <div class="latest-news-section2">
-                <img src="/images/news-01.png" alt="" />
-                <div class="latest-news-section2-info">
-                  <h4>Created SASS Section</h4>
-                  <p>New SASS Examples & Tutorials</p>
-                </div>
-                <span>3 Days Ago</span>
-              </div>
-
-              <div class="latest-news-section2">
-                <img src="/images/news-02.png" alt="" />
-                <div class="latest-news-section2-info">
-                  <h4>Changed The Design</h4>
-                  <p>A Brand New Website Design</p>
-                </div>
-                <span>5 Days Ago</span>
-              </div>
-
-              <div class="latest-news-section2">
-                <img src="/images/news-03.png" alt="" />
-                <div class="latest-news-section2-info">
-                  <h4>Team Increased</h4>
-                  <p>3 Developers Joined The Team</p>
-                </div>
-                <span>7 Days Ago</span>
-              </div>
-
-              <div class="latest-news-section2">
-                <img src="/images/news-04.png" alt="" />
-                <div class="latest-news-section2-info">
-                  <h4>Added Payment Gateway</h4>
-                  <p>Many New Payment Gateways Added</p>
-                </div>
-                <span>9 Days Ago</span>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-section1">
-                <div class="box-title">
-                  <h2>Latest Tasks</h2>
-                </div>
-              </div>
-              <div class="latest-tasks-section2">
-                <div class="latest-tasks-section2-info">
-                  <h4>Record One New Video</h4>
-                  <p>Record Python Create Exe Project</p>
-                </div>
-                <i class="fa-regular fa-trash-can"></i>
-              </div>
-
-              <div class="latest-tasks-section2">
-                <div class="latest-tasks-section2-info">
-                  <h4>Write Article</h4>
-                  <p>Write Low Level vs High Level Languages</p>
-                </div>
-                <i class="fa-regular fa-trash-can"></i>
-              </div>
-
-              <div class="latest-tasks-section2">
-                <div class="latest-tasks-section2-info">
-                  <h4>Finish Project</h4>
-                  <p>Publish Academy Programming Project</p>
-                </div>
-                <i class="fa-regular fa-trash-can"></i>
-              </div>
-
-              <div class="latest-tasks-section2">
-                <div class="latest-tasks-section2-info">
-                  <h4>Finish Lesson</h4>
-                  <p>Finish Teaching Flex Box</p>
-                </div>
-                <i class="fa-regular fa-trash-can"></i>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-section1">
-                <div class="box-title">
-                  <h2>Top Search Items</h2>
-                </div>
-              </div>
-              <div class="top-search-items">
-                <div class="top-search-items-info">
-                  <p>Keyword</p>
-                  <p>Search Count</p>
-                </div>
-
-                <div class="top-search-items-info">
-                  <h4>Programming</h4>
-                  <span>220</span>
-                </div>
-                <div class="top-search-items-info">
-                  <h4>JavaScript</h4>
-                  <span>180</span>
-                </div>
-                <div class="top-search-items-info">
-                  <h4>PHP</h4>
-                  <span>160</span>
-                </div>
-                <div class="top-search-items-info">
-                  <h4>Code</h4>
-                  <span>145</span>
-                </div>
-                <div class="top-search-items-info">
-                  <h4>Design</h4>
-                  <span>110</span>
-                </div>
-                <div class="top-search-items-info">
-                  <h4>Logic</h4>
-                  <span>95</span>
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-section1">
-                <div class="box-title">
-                  <h2>Latest Uploads</h2>
-                </div>
-              </div>
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/pdf.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>my-file.pdf</h4>
-                  <p>Zana</p>
-                </div>
-                <span>2.9MB</span>
-              </div>
-
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/avi.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>My-Video-File.avi</h4>
-                  <p>Admin</p>
-                </div>
-                <span>4.9MB</span>
-              </div>
-
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/psd.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>My-Psd-File.psd</h4>
-                  <p>Ahmad</p>
-                </div>
-                <span>4.5MB</span>
-              </div>
-
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/zip.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>My-Zip-File.zip</h4>
-                  <p>User</p>
-                </div>
-                <span>8.9MB</span>
-              </div>
-
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/dll.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>My-DLL-File.dll</h4>
-                  <p>Admin</p>
-                </div>
-                <span>4.9MB</span>
-              </div>
-
-              <div class="latest-news-section2 latest-uploads">
-                <img
-                  src="/images/eps.svg"
-                  alt=""
-                  class="latest-uploads-image"
-                />
-                <div class="latest-news-section2-info latest-uploads-info">
-                  <h4>My-Eps-File.eps</h4>
-                  <p>Designer</p>
-                </div>
-                <span>8.9MB</span>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-section1">
-                <div class="box-title">
-                  <h2>Last Project Progress</h2>
+                  <h2>Verification Process</h2>
                 </div>
               </div>
               <div class="last-project-progress">
                 <div class="last-project-progress-info">
                   <ul>
-                    <li><span></span> Got The Project</li>
-                    <li><span></span> Started The Project</li>
-                    <li><span></span> The Project About To Finish</li>
-                    <li><span></span> Test The Project</li>
-                    <li><span></span> Finish The Project & Get Money</li>
+                    <li><span></span> Registered</li>
+                    <li><span></span> Applied for Jobs</li>
+                    <li><span></span> Profile Verified</li>
+                    <li><span></span> Application Reviewed</li>
+                    <li><span></span> Job Offer Received</li>
                   </ul>
                 </div>
                 <img src="/images/project.png" alt="" />
@@ -454,25 +255,25 @@
             <div class="box">
               <div class="box-section1">
                 <div class="box-title">
-                  <h2>Reminders</h2>
+                  <h2>Payment Process</h2>
                 </div>
               </div>
               <div class="reminders-section2">
                 <div class="reminders">
-                  <h4>Check My Tasks List</h4>
-                  <p>28/09/2022 - 12:00am</p>
+                  <h4>Check Payment Details</h4>
+                  <p>Review the payment info.</p>
                 </div>
                 <div class="reminders">
-                  <h4>Check My Projects</h4>
-                  <p>26/10/2022 - 12:00am</p>
+                  <h4>Enter Billing Information</h4>
+                  <p>Provide billing details.</p>
                 </div>
                 <div class="reminders">
-                  <h4>Call All My Clients</h4>
-                  <p>05/11/2022 - 12:00am</p>
+                  <h4>Confirm Payment</h4>
+                  <p>Verify and submit.</p>
                 </div>
                 <div class="reminders">
-                  <h4>Finish The Development Workshop</h4>
-                  <p>20/12/2022 - 12:00am</p>
+                  <h4>Receive Confirmation</h4>
+                  <p>Get receipt confirmation.</p>
                 </div>
               </div>
             </div>
@@ -655,6 +456,6 @@
         </div>
       </main>
     </div>
-    <script src="/javascripts/script1.js"></script>
+    <script src="/javascripts/script.js"></script>
   </body>
 </html>

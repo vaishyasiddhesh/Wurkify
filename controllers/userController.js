@@ -16,7 +16,61 @@ const load_landing=async(req,res)=>{
     }
 }
 
+const load_setting = async(req,res)=>{
+    try{
+        res.render("settings")
+    } catch(error){
+        console.log("Error in load setting")
+    }
+}
 
+const load_activites = async(req,res)=>{
+    try{
+        res.render("activites")
+    } catch(error){
+        console.log("Error in load setting")
+    }
+}
+
+// const load_eventposting = async(req,res)=>{
+//     try{
+//         res.render("eventposting")
+//     } catch(error){
+//         console.log("Error in load setting")
+//     }
+// }
+
+// const load_freind = async(req,res)=>{
+//     try{
+//         res.render("Freinds")
+//     } catch(error){
+//         console.log("Error in load setting")
+//     }
+// }
+
+const load_application = async(req,res)=>{
+    try{
+        res.render("application")
+    } catch(error){
+        console.log("Error in load setting")
+    }
+}
+
+const load_profile = async (req,res)=>{
+    try{
+        res.render('Profile')
+    } catch (error){
+        console.log('error in load profile')
+    }
+}
+
+const load_file = async(req,res) =>{
+    try {
+        res.render('Files')
+    } catch (error) {
+        console.log('Error in load file')
+    }
+}
 const loadRegister=async(req,res) => {
     try {
         console.log('loadRegister chala woh b userController mein ')
@@ -26,6 +80,56 @@ const loadRegister=async(req,res) => {
     }
     
 }
+const loadLogin =async(req,res) => {
+    try {
+        console.log('loadLogin chala woh b userController mein ')
+        res.render("register")
+    } catch (error) {
+        console.log("Error meassges")
+    }
+    
+}
+
+// const load_plan = async (req,res) =>{
+//     try {
+//         res.render('Plans')
+//     } catch (error) {
+//         console.log('error in load plan')
+//     }
+// }
+
+const load_latestevent = async (req,res) =>{
+    try {
+        res.render('Lastest-event')
+    } catch (error) {
+        console.log('error latestevent')
+    }
+}
+
+const load_messaging = async (req,res) =>{
+    try {
+        res.render('message')
+    } catch (error) {
+        console.log('error in load messaging')
+    }
+}
+
+const load_payment = async (req,res) =>{
+    try {
+        res.render('payment')
+    } catch (error) {
+        console.log('error in payment')
+    }
+}
+
+const load_helpnsupport = async (req,res)=>{
+    try {
+        res.render('Faq')
+    } catch (error) {
+        console.log('error in helpnsupport')
+    }
+}
+
 const insertUser=async(req,res) => {
     try {
         const user=new User({
@@ -72,12 +176,13 @@ const verifyLogin=async(req,res)=>{
 const load_dashboard=async(req,res)=>{
     try {
         const UserData= await User.findById({_id:req.session.user_id})
-        res.render('dashboard',{seeker:UserData});
+        res.render('seekerDashboard',{seeker:UserData});
         
     } catch (error) {
         console.log(error.message)
     }
 };
+
 
 // -----------------------------shaiban userAadhaarController---------------------
 
@@ -391,8 +496,19 @@ const userProfileDeleteController = async (req,res) =>{
 
   module.exports={
     loadRegister,
-    insertUser,
+    insertUser, 
+    load_file,
+    loadLogin,
     verifyLogin,
+    load_profile,
+    load_activites,
+    load_latestevent,
+    load_application,
+    load_payment,
+    // load_plan,
+    load_setting,
+    load_messaging,
+    load_helpnsupport,
     load_dashboard,
     load_landing,
     userAadhaarController,

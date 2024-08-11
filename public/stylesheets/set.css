@@ -1,0 +1,241 @@
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 100%;
+    height: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup.active {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.popup .general-info-section2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.popup .form-row label {
+    font-size: 0.9rem;
+    color: var(--third-color);
+    margin-bottom: 5px;
+}
+
+.popup .form-row input, .popup .form-row select {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid var(--ccc-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+}
+
+.popup .form-row input::placeholder {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.popup .form-row input[type="email"] {
+    color: #000;
+    cursor: text;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: rgb(110, 110, 238);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: var(--hover-color);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: 48%;
+}
+
+.gender {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.gender .form-item {
+    width: 100%;
+}
+
+.gender .form-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--third-color);
+}
+
+.gender .form-item select {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid var(--ccc-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: #000;
+    appearance: none;
+}
+
+/* code for aadhar info */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between form elements */
+    width: 100%; /* Full width of the container */
+}
+
+form label {
+    font-size: 0.9rem;
+    color: var(--third-color);
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="file"],
+form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid var(--ccc-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+form input[type="text"]::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+form small {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: rgb(110, 110, 238);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+
+/* Pan Verification */
+
+  #pan-form {
+    max-width: 500px;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #pan-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  #pan-form input[type="text"],
+  #pan-form input[type="date"],
+  #pan-form textarea,
+  #pan-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #pan-form input[type="text"]:focus,
+  #pan-form input[type="date"]:focus,
+  #pan-form textarea:focus,
+  #pan-form input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  #pan-form small {
+    display: block;
+    margin-bottom: 15px;
+    color: #666;
+  }
+
+  #pan-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  #pan-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* account info */
