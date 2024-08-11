@@ -10,10 +10,6 @@ const organiserRegister=new mongoose.Schema({
         type:String,
         required:true
     },
-    phone:{
-        type:Number,
-        reqiured:true
-    },
     password:{
         type:String,
         required:true

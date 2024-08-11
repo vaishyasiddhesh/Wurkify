@@ -58,7 +58,7 @@ const verifyLogin=async(req,res)=>{
         const datachecker= await User.findOne({email:email});
         if (datachecker.password===password) {
             req.session.user_id=datachecker._id;
-                    res.redirect('/dashboard')
+                    res.redirect('/user/dashboard')
                
                     
         } else {

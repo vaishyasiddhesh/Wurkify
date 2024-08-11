@@ -34,7 +34,7 @@ user_route.get('/landing',auth.isLogout,userController.load_landing)
 user_route.post('/login',auth.isLogout,userController.verifyLogin)
 user_route.get('/register',auth.isLogout,userController.loadRegister)
 user_route.post('/register',auth.isLogout,userController.insertUser)
-user_route.post('/login',auth.isLogout,userController.verifyLogin)
+
 
 user_route.get('/dashboard',auth.isLogin,userController.load_dashboard)
 

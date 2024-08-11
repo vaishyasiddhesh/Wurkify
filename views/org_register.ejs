@@ -12,15 +12,15 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <form action="/organiser/login" method="post" class="sign-in-form">
             <h2 class="title">Organizer Sign In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Organizer Username" />
+              <input type="email" placeholder="Organizer email" name="email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" name="password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
 
@@ -45,15 +45,15 @@
             <h2 class="title">Organizer Sign Up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Organizer Name" />
+              <input type="text" placeholder="Organizer Name" name="Fullname" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" name="email"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" name="password" />
             </div>
             <input type="submit" value="Sign Up" class="btn solid" />
 

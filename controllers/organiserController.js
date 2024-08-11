@@ -4,9 +4,10 @@ const OrganiserAadhaar = require("../models/organiserAadhaar")
 const formidable = require('formidable');
 const fs = require('fs');
 const { validateDateOfBirth,parseDateOfBirth} = require("../helpers/userHelper");
+
 const organiserRegister=async(req,res) => {
     try {
-        
+        console.log('orgaiser register render')     
         res.render("org_register")
     } catch (error) {
         console.log("Error meassges")
@@ -18,9 +19,7 @@ const insertOrganiser=async(req,res) => {
         const organiser=new Organiser({
             Fullname:req.body.Fullname,
             email:req.body.email,
-            phone:req.body.phone,
             password:req.body.password
-
         });
 
         const organiserData=await organiser.save()
@@ -35,9 +34,37 @@ const insertOrganiser=async(req,res) => {
 
         
     } catch (error) {
-        console.log("error message")
+        console.log(error.message)
     }
 }
+const verifyLoginOrg=async(req,res)=>{
+    try {
+        console.log('verify login org controller k ander chala  ')
+        const email=req.body.email;
+        const password=req.body.password;
+        const datachecker= await Organiser.findOne({email:email});
+        if (datachecker.password===password) {
+            req.session.organiser_id=datachecker._id;
+                    res.redirect('/dashboard')
+               
+                    
+        } else {
+            res.render('org_register',{message:"Email or password is incorrect"})
+        }
+        
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+const loadOrg_dashboard=async(req,res)=>{
+    try {
+        const UserData= await Organiser.findById({_id:req.session.organiser_id})
+        res.render('dashboard',{seeker:UserData});
+        
+    } catch (error) {
+        console.log(error.message)
+    }
+};
 
 
 // -----------------------------shaiban userAadhaarController---------------------
@@ -354,6 +381,8 @@ const organiserAadhaarController = async (req,res,next) =>{
         organiserAadhaarDeleteController,
         organiserProfileController,
         oragainserProfileUpdateController,
-        organiserProfileDeleteController
+        organiserProfileDeleteController,
+        verifyLoginOrg,
+        loadOrg_dashboard
     }   
     

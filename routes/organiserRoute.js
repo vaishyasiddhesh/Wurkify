@@ -4,6 +4,10 @@ const bodyParser=require('body-parser')
 const Formidable = require('express-formidable');
 
 const organiser_route=express();
+const session=require('express-session');
+const config=require('../config/config')
+organiser_route.use(session({secret:config.sessionSecert}))
+
 
 const { 
     organiserAadhaarController,
@@ -23,10 +27,14 @@ organiser_route.use(bodyParser.json());
 organiser_route.use(bodyParser.urlencoded({ extended: true }));
 
 //userRoute
-
+const organiserAuth=require('../middleware/organiserAuth')
 const organiserController=require('../controllers/organiserController');
+const organiserRegister = require('../models/organiserRegister');
+organiser_route.get('/register',organiserAuth.isLogout,organiserController.organiserRegister)
+organiser_route.post('/register',organiserController.insertOrganiser)
+organiser_route.get('/login',organiserController.organiserRegister)
+organiser_route.post('/login',organiserController.verifyLoginOrg)
 
-organiser_route.post('/register',organiserController.organiserRegister)
 
 // organiser_route.post('')
 
